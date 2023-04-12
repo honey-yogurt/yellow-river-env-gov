@@ -1,6 +1,5 @@
 package cn.gov.yrcc.shared.api;
 
-import cn.gov.yrcc.shared.api.IErrorCode;
 
 /**
  * API返回码封装类

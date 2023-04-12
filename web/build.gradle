@@ -10,8 +10,10 @@ dependencies {
 			'com.github.xiaoymin:knife4j-spring-boot-starter',
 			'org.springframework.boot:spring-boot-starter-aop',
 			'org.springframework.boot:spring-boot-starter-web',
+			'io.swagger.core.v3:swagger-annotations',
+			"com.github.pagehelper:pagehelper-spring-boot",
 	)
-	testImplementation(
+    testImplementation(
 			'org.springframework.boot:spring-boot-starter-test'
 	)
 }

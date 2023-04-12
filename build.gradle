@@ -37,7 +37,8 @@ allprojects {
 ext {
 	lib = [
 			servlet   : '4.0.1',
-			pagehelper: '1.4.6',
+			pagehelperStarter: '1.4.6',
+			pagehelper: '5.3.2',
 			validation: '2.0.1.Final',
 			jwt       : '0.11.2',
 			lombok    : '1.18.24',
@@ -65,7 +66,8 @@ ext {
 			guava: '31.1-jre'
 	]
 	swagger = [
-			annotations: '1.5.22'
+			annotations: '1.5.22',
+			v3: '2.1.2',
 	]
 	kotlin_lib = [
 			okhttp: '5.0.0-alpha.11',
@@ -114,7 +116,8 @@ subprojects {
 			dependency "javax.servlet:javax.servlet-api:${lib.servlet}"
 			dependency "javax.validation:validation-api:${lib.validation}"
 			dependency "com.github.xiaoymin:knife4j-spring-boot-starter:${lib.knife4j}"
-			dependency "com.github.pagehelper:pagehelper-spring-boot-starter:${lib.pagehelper}"
+			dependency "com.github.pagehelper:pagehelper-spring-boot-starter:${lib.pagehelperStarter}"
+			dependency "com.github.pagehelper:pagehelper:${lib.pagehelper}"
 			dependency "io.jsonwebtoken:jjwt-api:${lib.jwt}"
 			dependency "io.jsonwebtoken:jjwt-impl:${lib.jwt}"
 			dependency "io.jsonwebtoken:jjwt-jackson:${lib.jwt}"
@@ -139,6 +142,7 @@ subprojects {
 			dependency "com.google.guava:guava:${google.guava}"
 
 			dependency "io.swagger:swagger-annotations:${swagger.annotations}"
+			dependency "io.swagger.core.v3:swagger-annotations:${swagger.v3}"
 
 			dependency "com.squareup.okhttp3:okhttp:${kotlin_lib.okhttp}"
 		}

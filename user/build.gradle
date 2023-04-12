@@ -1,4 +1,16 @@
 description = 'user'
 
 dependencies {
+	api project(':mbg')
+	implementation(
+			'org.springframework.boot:spring-boot-starter-security',
+			'org.springframework:spring-tx',
+			'org.mybatis:mybatis',
+			'org.mybatis:mybatis-spring',
+			'io.swagger:swagger-annotations',
+			'com.github.pagehelper:pagehelper',
+			'cn.hutool:hutool-all',
+			'com.github.pagehelper:pagehelper-spring-boot',
+	)
+	implementation project(path: ':mbg')
 }

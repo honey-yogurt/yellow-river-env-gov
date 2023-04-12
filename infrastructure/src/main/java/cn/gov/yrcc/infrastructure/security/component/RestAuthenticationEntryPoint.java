@@ -1,6 +1,7 @@
 package cn.gov.yrcc.infrastructure.security.component;
 
 import cn.gov.yrcc.shared.api.CommonResult;
+
 import cn.hutool.json.JSONUtil;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;

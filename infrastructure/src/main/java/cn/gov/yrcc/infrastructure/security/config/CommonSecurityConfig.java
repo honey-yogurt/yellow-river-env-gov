@@ -2,6 +2,7 @@ package cn.gov.yrcc.infrastructure.security.config;
 
 import cn.gov.yrcc.infrastructure.security.component.*;
 import cn.gov.yrcc.infrastructure.security.util.JwtTokenUtil;
+
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

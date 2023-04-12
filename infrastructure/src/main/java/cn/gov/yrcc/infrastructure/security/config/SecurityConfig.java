@@ -1,7 +1,7 @@
 package cn.gov.yrcc.infrastructure.security.config;
 
 import cn.gov.yrcc.infrastructure.security.component.*;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -13,6 +13,8 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.access.intercept.FilterSecurityInterceptor;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
+import javax.annotation.Resource;
+
 /**
  * SpringSecurity相关配置，仅用于配置SecurityFilterChain
  *
@@ -20,17 +22,17 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
-	@Autowired
+	@Resource
 	private IgnoreUrlsConfig ignoreUrlsConfig;
-	@Autowired
+	@Resource
 	private RestfulAccessDeniedHandler restfulAccessDeniedHandler;
-	@Autowired
+	@Resource
 	private RestAuthenticationEntryPoint restAuthenticationEntryPoint;
-	@Autowired
+	@Resource
 	private JwtAuthenticationTokenFilter jwtAuthenticationTokenFilter;
-	@Autowired(required = false)
+	@Resource
 	private DynamicSecurityService dynamicSecurityService;
-	@Autowired(required = false)
+	@Resource
 	private DynamicSecurityFilter dynamicSecurityFilter;
 
 	@Bean
